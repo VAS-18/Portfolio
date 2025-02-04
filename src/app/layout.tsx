@@ -21,13 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${pressStart2P.className}`}>
-        <header>
-          {/* Navigation will go here */}
-        </header>
-        {children}
-        <footer>
-          {/* Footer content will go here */}
-        </footer>
+        <div className="scanlines" />
+        <div className="vignette" />
+        <main>
+          <header>
+          </header>
+          {children}
+          <footer>
+
+          </footer>
+        </main>
       </body>
     </html>
   );
