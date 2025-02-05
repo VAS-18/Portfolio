@@ -1,12 +1,12 @@
 "use client"
-import React from "react";
+import React from 'react'
 import Image from "next/image";
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
-const Card: React.FC = () => {
+const HomeCard: React.FC = () => {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: 'voidcard',
+    id: 'homecard',
   });
   
   const style = transform ? {
@@ -24,7 +24,7 @@ const Card: React.FC = () => {
     >
       <div className="outer-container border border-dashed border-t-0">
         <div className="flex justify-between w-full space-x-2 p-2">
-          <div className="font-terminal text-xs sm:text-sm p-1">Photo : /void.gif</div>
+          <div className=" font-terminal text- sm:text-sm p-1">Photo : /HummingBird?...</div>
           <div className="border border-dashed border-white text-white font-mono p-1">
             <button className="font-extrabold text-base sm:text-lg">X</button>
           </div>
@@ -32,12 +32,12 @@ const Card: React.FC = () => {
       </div>
       <div className="relative">
         <Image
-          src="/void.gif"
+          src="/hummingbird.gif"
           alt="void"
-          width={800}
+          width={600}
           height={800}
           unoptimized={true}
-          className=""
+          className="w-full h-auto object-cover"
           priority
         />
       </div>
@@ -45,4 +45,4 @@ const Card: React.FC = () => {
   );
 };
 
-export default Card;
+export default HomeCard;

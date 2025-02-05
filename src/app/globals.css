@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* its AI Generated :p*/
-
 :root {
-  /* Retro color palette */
   --color-primary: #39ff14;     /* Bright green - CRT monitor style */
   --color-secondary: #ff00ff;   /* Magenta */
   --color-accent: #00ffff;      /* Cyan */
@@ -17,22 +14,40 @@
   --vignette-opacity: 0.4;      /* Control vignette intensity */
 }
 
-/* Removed scanline animation */
+@layer base {
+  body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: var(--font-vt323), monospace;
+    text-shadow: 0 0 5px var(--color-text);
+  }
 
-body {
-  color: var(--color-text);
-  background-color: var(--color-background);
-  font-family: 'Press Start 2P', monospace;
-  text-shadow: 0 0 5px var(--color-text);
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-press-start), monospace;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
 }
 
-/* Scanline overlay */
+@layer utilities {
+  .font-pixel {
+    font-family: var(--font-press-start), monospace;
+  }
+
+  .font-terminal {
+    font-family: var(--font-vt323), monospace;
+  }
+}
+
+html, body, #__next {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
 .scanlines {
   position: fixed;
   top: 0;
@@ -54,9 +69,6 @@ body {
   20%, 30% { background-position: 2 100%; }
 }
 
-
-
-/* Simplified vignette effect */
 .vignette {
   position: absolute;
   top: 0;
@@ -72,7 +84,6 @@ body {
   );
 }
 
-/* Retro button styles */
 .retro-button {
   background-color: var(--color-background);
   color: var(--color-primary);
@@ -90,7 +101,6 @@ body {
   box-shadow: 0 0 10px var(--color-primary);
 }
 
-/* Retro container with border effect */
 .retro-container {
   border: 2px solid var(--color-primary);
   background-color: rgba(10, 10, 10, 0.8);
@@ -111,14 +121,12 @@ body {
   pointer-events: none;
 }
 
-/* Retro text effect */
 .retro-text {
   color: var(--color-primary);
   text-shadow: 0 0 5px var(--color-primary);
   letter-spacing: 2px;
 }
 
-/* Optional glitch effect - only apply it to elements with .glitch class */
 @keyframes glitch {
   0%, 100% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }
@@ -162,10 +170,10 @@ body {
   }
 }
 
-/* Main content container */
 main {
-  position: relative;
   height: 100vh;
-  overflow-y: auto;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
   z-index: 1;
 } 
