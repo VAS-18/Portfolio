@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #39ff14;     /* Bright green - CRT monitor style */
-  --color-secondary: #ff00ff;   /* Magenta */
-  --color-accent: #00ffff;      /* Cyan */
-  --color-background: #0a0a0a;  /* Dark background */
-  --color-text: #39ff14;        /* Bright green text */
+  --color-primary: #39ff14;     
+  --color-secondary: #ff00ff;   
+  --color-accent: #00ffff;      
+  --color-background: #0a0a0a; 
+  --color-text: #39ff14;       
   
-  --scanline-size: 4px;         /* Increased size for better performance */
-  --scanline-intensity: 0.3;    /* Reduced for subtlety */
-  --vignette-opacity: 0.4;      /* Control vignette intensity */
+  --scanline-size: 4px;         
+  --scanline-intensity: 0.3;    
+  --vignette-opacity: 0.4;
 }
 
 @layer base {
@@ -39,15 +39,6 @@
   }
 }
 
-html, body, #__next {
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-}
-
 .scanlines {
   position: fixed;
   top: 0;
@@ -69,21 +60,6 @@ html, body, #__next {
   20%, 30% { background-position: 2 100%; }
 }
 
-.vignette {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 98;
-  background: radial-gradient(
-    circle at center,
-    transparent 30%,
-    rgba(0, 0, 0, var(--vignette-opacity)) 100%
-  );
-}
-
 .retro-button {
   background-color: var(--color-background);
   color: var(--color-primary);
@@ -94,6 +70,26 @@ html, body, #__next {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+.retro-button-github {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retro-button-github:hover{
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  box-shadow: 0px 0px 10px var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+
 
 .retro-button:hover {
   background-color: var(--color-primary);
@@ -127,49 +123,7 @@ html, body, #__next {
   letter-spacing: 2px;
 }
 
-@keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-2px, -2px); }
-  80% { transform: translate(2px, 2px); }
-}
-
-.glitch {
-  position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  animation: glitch 1s steps(1) infinite;
-}
-
-.glitch::before {
-  color: var(--color-secondary);
-  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-  transform: translate(-2px);
-}
-
-.glitch::after {
-  color: var(--color-accent);
-  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
-  transform: translate(2px);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* to make sure it does not scroll */
 main {
   height: 100vh;
   width: 100vw;
@@ -177,3 +131,14 @@ main {
   position: relative;
   z-index: 1;
 } 
+
+
+::selection {
+  background-color: #ff0000;
+  color: #ffffff; 
+}
+
+::-moz-selection {
+  background-color: #ff0000;
+  color: #ffffff;
+}

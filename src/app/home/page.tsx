@@ -4,7 +4,6 @@ import Image from "next/image";
 import Card from "@/components/card/card";
 import HomeCard from "@/components/card/HomeCard";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import TypewriterComponent from "typewriter-effect";
 
 const Homepage: React.FC = () => {
   const name = "Uday Vashishtha";
@@ -13,6 +12,7 @@ const Homepage: React.FC = () => {
     voidcard: { x: 1300, y: 200 },
   });
 
+  //Note for future: all of this was present in the documentation
   function handleDragEnd(event: DragEndEvent) {
     const { active, delta } = event;
     if (delta) {
@@ -60,14 +60,30 @@ const Homepage: React.FC = () => {
                 Skills <span className=" animate-pulse">...</span>
                 <div className="font-terminal text-xl mt-10">
                   <ul className="mt-10">
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ React</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Express</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ MongoDB</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Nodejs</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Nextjs</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Figma</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Sql</li>
-                    <li className="mt-2 hover:text-white hover:cursor-pointer">$ Postresql</li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ React
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Express
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ MongoDB
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Nodejs
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Nextjs
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Figma
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Sql
+                    </li>
+                    <li className="mt-2 hover:text-white hover:cursor-pointer underline">
+                      $ Postresql
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -91,16 +107,11 @@ const Homepage: React.FC = () => {
               }}
             >
               <HomeCard />
-
-              
             </div>
-            
           </div>
         </div>
       </div>
-      
     </DndContext>
-    
   );
 };
 

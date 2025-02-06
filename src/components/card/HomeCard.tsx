@@ -20,7 +20,7 @@ const HomeCard: React.FC = () => {
       style={style}
       {...attributes} 
       {...listeners}
-      className="container w-[250px] sm:w-[300px] lg:w-[350px] border-2 border-white border-dashed bg-black cursor-move z-[9999]"
+      className="container w-[250px] sm:w-[300px] lg:w-[350px] border-2 border-white border-dashed bg-black cursor-grab z-[9999]"
     >
       <div className="outer-container border border-dashed border-t-0">
         <div className="flex justify-between w-full space-x-2 p-2">

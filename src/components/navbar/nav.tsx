@@ -15,19 +15,19 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <h1 className="text-xl sm:text-2xl p-3 my-auto font-vt">[portfolio]</h1>
           <div className="hidden md:flex items-center space-x-4 text-2xl">
-            <Link href="/home" className="hover:bg-white hover:text-black px-3 py-2 font-bold font-vt">
+            <Link href="/" className="hover:bg-white hover:text-black px-3 py-2 font-bold font-vt">
               Home
             </Link>
-            <Link href="#home" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
+            <Link href="/project" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
               Projects
             </Link>
-            <Link href="#home" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
+            <Link href="/about" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
               About Me
             </Link>
-            <Link href="#home" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
+            <Link href="/blog" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
               Blogs
             </Link>
-            <Link href="#home" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
+            <Link href="/favorite" className="hover:bg-white hover:text-black px-3 py-2 font-bold">
               {"</>"}
             </Link>
           </div>
