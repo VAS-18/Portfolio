@@ -44,16 +44,16 @@ const Homepage: React.FC = () => {
               </p>
               <ul className="mt-6 lg:mt-10">
                 <li className="text-white font-mono text-base sm:text-xl mt-2">
-                  {"$"} I am a Full Stack Developer
+                  {"$"} Full Stack Developer
                 </li>
                 <li className="text-white font-mono text-base sm:text-xl mt-2">
                   {"$"} Low Level Enthusiast{" "}
                 </li>
                 <li className="text-white font-mono text-base sm:text-xl mt-2">
-                  {"$"} I am a Full Stack Developer
+                  {"$"} Robotics
                 </li>
                 <li className="text-white font-mono text-base sm:text-xl mt-2">
-                  {"$"} I am a Full Stack Developer
+                  {"$"} Full Time Shit poster on X
                 </li>
               </ul>
               <div className="mt-20  font-pixel ">
