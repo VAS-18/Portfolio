@@ -20,7 +20,7 @@ const Card: React.FC = () => {
       style={style}
       {...attributes} 
       {...listeners}
-      className="container w-[250px] sm:w-[300px] lg:w-[350px] border-2 border-white border-dashed bg-black cursor-grab z-[9999]"
+      className="container w-[500px] sm:w-[300px] lg:w-[500px] border-2 border-white border-dashed bg-black cursor-grab z-[9999]"
     >
       <div className="outer-container border border-dashed border-t-0">
         <div className="flex justify-between w-full space-x-2 p-2">
@@ -34,8 +34,8 @@ const Card: React.FC = () => {
         <Image
           src="/void.gif"
           alt="void"
-          width={800}
-          height={800}
+          width={500}
+          height={500}
           unoptimized={true}
           className=""
           priority

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import Card from "@/components/card/card";
 import HomeCard from "@/components/card/HomeCard";
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
+import NowPlaying from "@/components/card/NowPlaying";
 
 const Homepage: React.FC = () => {
   const name = "Uday Vashishtha";
@@ -85,6 +85,12 @@ const Homepage: React.FC = () => {
                       $ Postresql
                     </li>
                   </ul>
+                </div>
+              </div>
+              <div className="border-2 border-dashed  w-1/4 mt-20 ">
+                <div className="mx-2 underline">Now playing :</div>
+                <div>
+                  <NowPlaying />
                 </div>
               </div>
             </div>

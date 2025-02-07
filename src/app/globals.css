@@ -7,11 +7,7 @@
   --color-secondary: #ff00ff;   
   --color-accent: #00ffff;      
   --color-background: #0a0a0a; 
-  --color-text: #39ff14;       
-  
-  --scanline-size: 4px;         
-  --scanline-intensity: 0.3;    
-  --vignette-opacity: 0.4;
+  --color-text: #39ff14;               
 }
 
 @layer base {
@@ -32,10 +28,12 @@
 @layer utilities {
   .font-pixel {
     font-family: var(--font-press-start), monospace;
+    text-shadow: 0 0 5px var(--color-text);
   }
 
   .font-terminal {
     font-family: var(--font-vt323), monospace;
+    text-shadow: 0 0 5px var(--color-text);
   }
 }
 
@@ -50,9 +48,9 @@
   pointer-events: none;
   z-index: 100;
   opacity: 0.2;
-  mix-blend-mode: multiply;
+  mix-blend-mode: hard-light;
 
-  animation: scanlines 4s linear infinite;
+  animation: scanlines 6s linear infinite;
 }
 
 @keyframes scanlines {
