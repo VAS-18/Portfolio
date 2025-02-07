@@ -24,8 +24,8 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Project One",
-    description: "A brief description of your first project and what it does.",
+    title: "Project Two",
+    description: "Lorem Ipsum or whatever it is",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     imageUrl: "/project1.jpg",
     githubUrl: "https://github.com/yourusername/project1",
@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Project One",
-    description: "A brief description of your first project and what it does.",
+    description: "Meoweowowowo.",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     imageUrl: "/project1.jpg",
     githubUrl: "https://github.com/yourusername/project1",
